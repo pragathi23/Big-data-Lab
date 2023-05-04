@@ -1,0 +1,104 @@
+CREATE KEYSPACE Students WITH REPLICATION = {
+'class':'SimpleStrategy',
+'replication_factor':1};
+CREATE KEYSPACE Students WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1};
+describe keyspaces;
+use system;
+exit
+describe keyspaces
+use system_auth
+'
+;
+use students;
+CREATE TABLE Student_info(
+RollNo int Primary Key,
+StudName text,
+DateofJoining timestamp,
+LastExamPercent double,
+);
+CREATE TABLE Student_info( RollNo int Primary Key, StudName text, DateofJoining timestamp, LastExamPercent double, );
+describe tables
+describe table student_info;
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6),(2,'Stephen Fox','2013-02-27',72.5),(3,'David Fleming','2014-04-12',81.7),(4,'Ian String','2020-05-4',63.4)
+;
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6),(2,'Stephen Fox','2013-02-27',72.5),(3,'David Fleming','2014-04-12',81.7),(4,'Ian String','2020-05-4',63.4) ;
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6) (2,'Stephen Fox','2013-02-27',72.5) (3,'David Fleming','2014-04-12',81.7) (4,'Ian String','2020-05-4',63.4)) ;
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values ((1,'Michael Storm','2012-03-29',69.6),(2,'Stephen Fox','2013-02-27',72.5),(3,'David Fleming','2014-04-12',81.7),(4,'Ian String','2020-05-4',63.4)) ;
+Begin BatchINSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6),(2,'Stephen Fox','2013-02-27',72.5),(3,'David Fleming','2014-04-12',81.7),(4,'Ian String','2020-05-4',63.4) ;
+;
+Begin BatchINSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6),(2,'Stephen Fox','2013-02-27',72.5),(3,'David Fleming','2014-04-12',81.7),(4,'Ian String','2020-05-4',63.4) ;
+BGEIN BATCH
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6)
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (2,'Stephen Fox','2013-02-27',72.5)
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (3,'David Fleming','2014-04-12',81.7)
+INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (4,'Ian String','2020-05-4',63.4)
+APPLY BATCH;
+BGEIN BATCH INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (2,'Stephen Fox','2013-02-27',72.5) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (3,'David Fleming','2014-04-12',81.7) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (4,'Ian String','2020-05-4',63.4) APPLY BATCH;
+BEGIN BATCH INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (2,'Stephen Fox','2013-02-27',72.5) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (3,'David Fleming','2014-04-12',81.7) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (4,'Ian String','2020-05-4',63.4) APPLY BATCH;
+BEGIN BATCH INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (1,'Michael Storm','2012-03-29',69.6) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (2,'Stephen Fox','2013-02-27',72.5) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (3,'David Fleming','2014-04-12',81.7) INSERT INTO student_info(RollNo, StudName,DateofJoining,LastExamPercent) Values (4,'Ian String','2020-05-04',63.4) APPLY BATCH;
+HISTORY
+;
+HISTORY ;
+CLEAR;
+LS
+;
+LS ;
+SHOW
+SHOW;
+SELECT * FROM Student_info;
+describe tables
+CREATE INDEX ON student_info(studname);
+select * from student_info where studname='Stephen Fox';
+create index on student_info(LLastExamPercent);
+create index on student_info(LastExamPercent);
+select * from student_info where lastexampercent = 81.7;
+describe table student_info
+UPDATE student_info SET rollno = 6 where rollno = 3;
+UPDATE student_info SET studname = 'Vijay' where rollno = 3;
+select * from student_info 
+;
+select * from student_info  ;
+clear
+exit
+CREATE KEYSPACE Employee WITH REPLICATION ={
+'class':'SimpleStrategy',
+'replicatino_factor':1};
+CREATE KEYSPACE Employee WITH REPLICATION ={ 'class':'SimpleStrategy', 'replicatino_factor':1};
+CREATE KEYSPACE Employee WITH REPLICATION ={ 'class':'SimpleStrategy', 'replication_factor':1};
+use employee;
+CREATE TABLE Employee-Info with attributes
+CREATE TABLE EmployeeInfo(Emp_Id int Primary Key, Emp_Name text,Designation text, Date_of_Joining timestamp, Salary double, Dept_Name text);
+Begin Batch
+INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (1,'a','CEO','2020-03-05',25500.50,'CSE')
+INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (2,'b','HR','2021-04-15',5500.50,'CSE')
+INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (3,'c','Manager','2020-05-25',55500.50,'IT')
+APPLY BATCH;
+Begin Batch INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (1,'a','CEO','2020-03-05',25500.50,'CSE') INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (2,'b','HR','2021-04-15',5500.50,'CSE') INSERT INTO EmployeeInfo (Emp_Id,Emp_Name,Designation,Date_of_joining,Salary,Dept_Name) Values (3,'c','Manager','2020-05-25',55500.50,'IT') APPLY BATCH;
+select * from EmployeeInfo;
+update  employeeinfo SET emp_name = 'e' , dept_name = 'management' where emp_id = 1;
+select * from EmployeeInfo;
+exit
+show keyspaces
+show keyspace
+describe keyspace
+describe keyspaces;
+create keyspace students with replication ={
+'class':'SimpleStrategy','replication_factor':1
+};
+create keyspace students with replication ={ 'class':'SimpleStrategy','replication_factor':1 };
+delete students;
+describe students;
+clear
+describe students;
+use keyspace students;
+use students;
+describe
+describe;
+clear
+ls
+;
+ls ;
+clear
+select * from students.schema_keyspaces;
+select * from system.schema_keyspaces;
+select * from system.students;
