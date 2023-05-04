@@ -1,0 +1,50 @@
+mongoimport --db Alphabets --collection alphabets --type=csv --file /home/bmscecse/Desktop/enjoysports.csv
+file Name-of-file-to-import
+mongoimport --db DB_Name --collection Collection_Name --type=json --
+mongoimport --db alphabets --collection --type csv -headerline --file '/home/hduser/Desktop/enjoysports.csv';
+mongoimport --db lphabets --collection --type csv -headerline --file '/home/hduser/Desktop/enjoysports.csv'
+mongoimport --db alphabets --collection  --type csv –headerline --file /home/hduser/Desktop/enjoysports.csv
+mongoimport --db Student --collection airlines --type csv –headerline --file
+db.aplhabets.find({_id:{$in:[1,2,3,4,5]}}).pretty()
+show collections
+show colections
+show dbs
+db.stats()
+db.alphabets.find({letter:'A'}).pretty(); 
+db.alphabets.find({letter:{$eq:'A'}}).pretty();
+db.alphabets.find({letter:{$eq:'A'}).pretty();
+db.alphabets.find({letter:/^A/}).pretty();
+db.alphabets.find({letter:/^ABCDE/}).pretty();
+db.alphabets.find({_id:{$in:[1,2,3,4,5]}}).pretty()
+db.alphabets.find({_id:{$in:[1,2,3,4,5]}})
+db.alphabets.find({*:*})
+db.alphabets.find({*})
+db.alphabets.find({})
+db.aplhabets.insertOne({_id:5,letter:'E'});
+db.aplhabets.insertOne({_id:4,letter:'D'});
+db.aplhabets.insertOne({_id:3,letter:'C'});
+db.aplhabets.insertOne({_id:2,letter:'B'});
+db.aplhabets.insertOne({_id:1,letter:'A'});
+db.createCollection('alphabets');
+db
+show collections;
+use Alphabets
+cls
+db.Student.find({Grade:{$eq:'VII'}}).pretty();
+db.Student.find({},{StudName:1,Grade:1,_id:0});
+show collections
+db.Student.find({StudName:"AryanDavid"});
+db.Student.find({StudName:"Aryan David"});
+db.Student.update({_id:3,StudName:"AryanDavid",Grade:"VII"},{$set:{Hobbies:"Skating"}},{upsert:true});
+db.Student.update({_id:3,StudName:"AryanDavid",Grade:"VII"},{$set:{Hobbies:"Skatin g"}},{upsert:true});
+db.Student.update({_id:3,StudName:"AryanDavid",Grade:"VII"},{$set:{Hobbies:"Skatin
+db.Student.insertOne({_id:1,StudName:"MichelleJacintha",Grade:"VII",Hobbies:"InternetSurfing"});
+db.Student.insert({_id:1,StudName:"MichelleJacintha",Grade:"VII",Hobbies:"InternetSurfing"});
+db.Student.drop();
+db.createCollection("Student");
+db.createCollection(“Student”);
+show dbs;
+help;
+db;
+use myDB;
+show dbs;
